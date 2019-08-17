@@ -1,4 +1,0 @@
-1.Import the necessary modules (inx_001).
-2. Create server (inx_002).
-3. Listen to port 3000 (inx_003).
-4. Write into the './data/users' file (inx_004).
