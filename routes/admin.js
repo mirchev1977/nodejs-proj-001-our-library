@@ -2,6 +2,7 @@ const fs      = require( 'fs' );
 const express = require( 'express' );
 const router  = express.Router();
 
+//inx_004
 router.get( '/new-book', ( req, res ) => {
     res.write( '<h1>New Book</h1>' );
     res.write( '<form action="/new-book" method="POST" >' );
@@ -12,13 +13,14 @@ router.get( '/new-book', ( req, res ) => {
     res.send();
 } );
 
+//inx_005
 router.post( '/new-book', ( req, res ) => {
     fs.appendFile( './data/books.txt', `\n${req.body.bookName}`, ( err ) => {
         if ( err ) {
             debugger;
         }
 
-        res.redirect( '/all-books' );
+        res.redirect( '/all-books' ); //inx_006
     } );
 } );
 

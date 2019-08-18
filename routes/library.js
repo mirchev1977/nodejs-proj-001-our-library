@@ -16,6 +16,7 @@ const fileReader = ( file, sortBooks ) => {
                 reject( err );
             }
             const books = data.split( /\n/ );
+            //inx_009
             if ( sortBooks === 'DESC' ) {
                 books.sort( (  a, b ) => {
                     return b.localeCompare( a );
@@ -42,8 +43,9 @@ router.get( '/all-books', ( req, res, next ) => {
     res.write( '<br /><a href="/all-books?sort=desc">Sort DESC</a></p>' );
 
     let sortBooks = 'ASC';
+    //inx_007
     if ( req.query[ 'sort' ] && req.query[ 'sort' ] === 'desc' ) {
-        sortBooks = 'DESC';
+        sortBooks = 'DESC'; //inx_008
     }
 
     fileReader( './data/books.txt', sortBooks ).then( books => {

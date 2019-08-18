@@ -1,0 +1,9 @@
+1. require body-parser and include it in the projcet (inx_001,inx_002,inx_003).
+2. Form for entering a new book. (inx_004). When the new book is entered 
+    -> redirection to /new-book method POST (inx_005).
+
+3. At (inx_005) -> write the book into the data/books.txt file and redirect to /all-books (inx_006).
+
+4. (inx_007) Intercept the sort query asc | desc (inx_008).
+
+5. (inx_009)  read the books from data/books.txt and sort them ASC or DESC.
