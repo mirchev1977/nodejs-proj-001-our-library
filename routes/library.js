@@ -1,10 +1,11 @@
-const fs      = require( 'fs' );
-const express = require( 'express' );
+const fs         = require( 'fs' );
+const express    = require( 'express' );
 const router  = express.Router();
 
 router.get( '/', ( req, res, next ) => {
     res.write( '<h1>Welcome to our library!</h1>' );
     res.write( '<div><a href="/all-books">All Books</a></div>' );
+    res.write( '<div><a href="/new-book">New Book</a></div>' );
     res.send();
 } );
 
