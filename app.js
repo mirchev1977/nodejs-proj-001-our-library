@@ -1,12 +1,12 @@
 const express = require( 'express' );
-const bodyParser = require( 'body-parser' ); //inx_001
+const bodyParser = require( 'body-parser' );
 const app     = express();
 
 const routesLibrary = require( './routes/library' );
 const routesAdmin   = require( './routes/admin'   );
 
-app.use( bodyParser.urlencoded( { extended: false } ) ); //inx_002
+app.use( bodyParser.urlencoded( { extended: false } ) );
 app.use( routesLibrary );
-app.use( routesAdmin   ); //inx_003
+app.use( routesAdmin   );
 
 app.listen( 3000 );
