@@ -1,8 +1,8 @@
 const express = require( 'express' );
 const app     = express();
 
-const routesLibrary = require( './routes/library' ); //inx_001
+const routesLibrary = require( './routes/library' );
 
-app.use( routesLibrary ); //inx_003
+app.use( routesLibrary );
 
 app.listen( 3000 );
