@@ -1,0 +1,5 @@
+1. (inx_001): Import the file of the library routes (inx_002).
+2. Include them ( the routes ) in our app (inx_003).
+3. At route '/' (inx_004) we print our welcoming message (inx_005).
+4. At route (inx_006) '/all-books' we print the "All Books" message (inx_007).
+5. Then we read all the books (inx_008) resorting to the help of the fileReader function (inx_009).
