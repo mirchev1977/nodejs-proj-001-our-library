@@ -9,13 +9,23 @@ router.get( '/', ( req, res, next ) => {
     res.send();
 } );
 
-const fileReader = ( file ) => {
+const fileReader = ( file, sortBooks ) => {
     const promise = new Promise( ( resolve, reject ) => {
         fs.readFile( file, 'utf-8', ( err, data ) => {
             if ( err ) {
                 reject( err );
             }
             const books = data.split( /\n/ );
+            if ( sortBooks === 'DESC' ) {
+                books.sort( (  a, b ) => {
+                    return b.localeCompare( a );
+                }  );
+            } else {
+                books.sort( (  a, b ) => {
+                    return a.localeCompare( b );
+                }  );
+            }
+
             const lis = books.map( book => `<li>${book}</li>` ).join( '' );
             const html = `<ul>${lis}</ul>`;
 
@@ -28,7 +38,15 @@ const fileReader = ( file ) => {
 
 router.get( '/all-books', ( req, res, next ) => {
     res.write( '<h1>All Books</h1>' );
-    fileReader( './data/books.txt' ).then( books => {
+    res.write( '<p><a href="/all-books?sort=asc">Sort ASC</a>' );
+    res.write( '<br /><a href="/all-books?sort=desc">Sort DESC</a></p>' );
+
+    let sortBooks = 'ASC';
+    if ( req.query[ 'sort' ] && req.query[ 'sort' ] === 'desc' ) {
+        sortBooks = 'DESC';
+    }
+
+    fileReader( './data/books.txt', sortBooks ).then( books => {
         res.write( books );
         res.write( '<div><a href="/">Home</a></div>' );
         res.send();
