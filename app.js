@@ -1,17 +1,11 @@
-const http = require( 'http' );
-const fs   = require( 'fs' );
+const http    = require( 'http' );
+const fs      = require( 'fs' );
+const express = require( 'express' );
 
-const server = http.createServer( ( req, res ) => {
-    fs.writeFile( './data/users', 'Pesho Atanasov Peshev', ( err ) => {
-        if ( err ) {
-            debugger;
-        }
+const app    = express();
 
-        debugger;
-    } );
+const routesLibrary = require( './routes/library' );
 
-    res.write( '<h1>Hello World</h1>' );
-    res.end();
-} );
+app.use( routesLibrary );
 
-server.listen( 3000 );
+app.listen( 3000 );
