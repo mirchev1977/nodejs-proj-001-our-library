@@ -1,14 +1,22 @@
-Bookhandleren i Kabul
-The Adventures of Tom Soyer and Huckle-Berry Fin
-Hello World
-We live here
-Nice to meet you
-Nice to see you
-nice
-veldig bra
-Ala bala nica turska panica
-Onche bonche gushta s pantalonche
-Riba, Gushta, ich mi se ne vryshta
-Berbata Berbata
-Jabaka and Gushtata sa Golemi Prijateli, Agu
-ala
+Fundamentals of Wavelets
+Data Smart	Foreman
+God Created the Integers
+Superfreakonomics	Dubner
+Orientalism
+Nature of Statistical Learning Theory
+Integration of the Indian States	Menon
+Drunkard's Walk
+Image Processing & Mathematical Morphology
+How to Think Like Sherlock Holmes	Konnikova
+Data Scientists at Work	Sebastian Gutierrez	data_science
+Slaughterhouse Five
+Birth of a Theorem	Villani
+Structure & Interpretation of Computer Programs
+Age of Wrath
+Trial
+Statistical Decision Theory
+Data Mining Handbook
+New Machiavelli
+Physics & Philosophy
+Making Software	Oram
+Analysis
