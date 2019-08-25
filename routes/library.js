@@ -15,7 +15,7 @@ const fileReader = ( file, sortBooks ) => {
             if ( err ) {
                 reject( err );
             }
-            const books = data.split( /\n/ );
+            let books = data.split( /\n/ );
             if ( sortBooks === 'DESC' ) {
                 books.sort( (  a, b ) => {
                     return b.localeCompare( a );
@@ -25,6 +25,8 @@ const fileReader = ( file, sortBooks ) => {
                     return a.localeCompare( b );
                 }  );
             }
+
+            books = books.filter( liEl => { if ( liEl ) { return liEl; } } );
 
             const lis = books.map( book => `<li>${book}</li>` ).join( '' );
             const html = `<ul>${lis}</ul>`;

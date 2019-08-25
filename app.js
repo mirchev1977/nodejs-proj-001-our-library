@@ -1,5 +1,9 @@
-const express = require( 'express' );
+const express    = require( 'express' );
 const bodyParser = require( 'body-parser' );
+const utilities  = require( './utilities' );
+
+utilities.rewriteFile( './data/books_templ.txt', './data/books.txt' );
+
 const app     = express();
 
 const routesLibrary = require( './routes/library' );
