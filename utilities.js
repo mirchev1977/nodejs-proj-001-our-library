@@ -5,7 +5,7 @@ const rootDir = path.dirname( process.mainModule.filename );
 function rewriteFile ( source, dest ) {
   const fullPath = path.join( rootDir, 'data', source );
 
-  const interval = 1 * 60 * 1000;
+  const interval = 15 * 60 * 1000;
 
   clearInterval();
   setInterval( function () {
