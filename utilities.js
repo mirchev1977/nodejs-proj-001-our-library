@@ -7,6 +7,7 @@ function rewriteFile ( source, dest ) {
 
   const interval = 1 * 60 * 1000;
 
+  clearInterval();
   setInterval( function () {
     fs.readFile( source, 'utf-8', ( err, data ) => {
         if ( err ) {
